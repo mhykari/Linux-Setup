@@ -1,0 +1,4 @@
+---
+- name : Install and configure terminator
+  import_tasks: install-configure-terminator.yml
+  tags: terminator-setup

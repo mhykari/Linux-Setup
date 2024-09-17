@@ -1,0 +1,8 @@
+---
+- name : Install apt Packages
+  import_tasks: install-apt-packages.yml
+  tags: install-apt-packages
+
+- name : Install snap Packages
+  import_tasks: install-snap-packages.yml
+  tags: install-snap-packages

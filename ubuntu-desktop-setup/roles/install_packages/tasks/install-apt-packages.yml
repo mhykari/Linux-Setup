@@ -1,0 +1,23 @@
+---
+
+- name: Install OS Utility Packages
+  become: true
+  apt:
+    name: "{{ item.name }}"
+    state: present
+    update_cache: yes
+    autoclean: yes
+    autoremove: yes
+  loop: "{{ apt_utility_packages }}"
+  notify: apt update
+
+- name: Install Network Packages
+  become: true
+  apt:
+    name: "{{ item.name }}"
+    state: present
+    update_cache: yes
+    autoclean: yes
+    autoremove: yes
+  loop: "{{ apt_network_packages }}"
+  notify: apt update

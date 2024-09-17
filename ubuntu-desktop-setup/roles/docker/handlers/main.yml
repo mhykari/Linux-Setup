@@ -1,0 +1,14 @@
+---
+- name: RestartDocker
+  become: true
+  systemd:
+    name: docker
+    enabled: yes
+    state: restarted
+
+- name: apt update
+  become: true
+  apt:
+    upgrade: no
+    update_cache: yes
+    cache_valid_time: 86400 #One day

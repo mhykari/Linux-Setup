@@ -1,0 +1,4 @@
+---
+- name : Install and configure zsh
+  import_tasks: install-configure-zsh.yml
+  tags: zsh-setup

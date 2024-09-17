@@ -1,0 +1,37 @@
+- name: Gather OS facts
+  ansible.builtin.setup:
+
+- name: Add universe repository
+  apt_repository:
+    repo: "deb http://archive.ubuntu.com/ubuntu {{ ansible_facts['distribution_release'] }} universe"
+    state: present
+  notify: apt update
+
+- name: Install zsh and related packages
+  apt:
+    name:
+      - zsh
+      - zsh-syntax-highlighting
+      - zsh-autosuggestions
+    state: present
+
+- name: Backup existing .zshrc file
+  ansible.builtin.command:
+    cmd: cp ~/.zshrc ~/.zshrcbackup
+  args:
+    creates: ~/.zshrcbackup
+
+- name: Deploy custom .zshrc from template
+  ansible.builtin.template:
+    src: zshrc.j2
+    dest: ~/.zshrc
+    owner: "{{ ansible_user_id }}"
+    mode: '0644'
+
+- name: Source .zshrc to apply changes
+  ansible.builtin.shell: source ~/.zshrc
+  args:
+    executable: /bin/zsh
+
+- name: Change default shell to zsh
+  ansible.builtin.shell: chsh -s $(which zsh)

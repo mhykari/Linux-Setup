@@ -1,0 +1,17 @@
+
+---
+
+- name: Update the apt package index
+  become: true
+  apt:
+    update_cache: yes
+
+- name: Install the terminator package
+  apt:
+    name: terminator
+    state: present
+
+- name: Set terminator as the default x-terminal-emulator
+  command: update-alternatives --set x-terminal-emulator /usr/bin/terminator
+  args:
+    warn: false

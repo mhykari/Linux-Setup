@@ -1,0 +1,41 @@
+---
+
+apt_utility_packages:
+  - name: "zip"
+  - name: "curl"
+  - name: "rsync"
+  - name: "htop"
+  - name: "zsh"
+  - name: "zsh-syntax-highlighting"
+  - name: "zsh-autosuggestions"
+  - name: "bash-completion"
+  - name: "terminator"
+  - name: "vim"
+  - name: "python3"
+  - name: "python3-pip"
+  - name: "screen"
+  - name: "lsof"
+  - name: "less"
+  - name: "iotop"
+  - name: "dstat"
+  - name: "sysstat"
+  - name: "git"
+  - name: "tree"
+  - name: "remmina"
+  - name: "remmina-plugin-rdp"
+
+apt_network_packages:
+  - name: "net-tools"
+  - name: "nmap"
+  - name: "dnsutils"
+  - name: "resolvconf"
+  - name: "tcpdump"
+  - name: "ethtool"
+  - name: "traceroute"
+
+snap_packages:
+  - name: "winbox"
+  - name: "code"
+  - name: "vlc"
+  - name: "spotify"
+  - name: "telegram-desktop"

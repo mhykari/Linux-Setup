@@ -1,0 +1,36 @@
+---
+
+- name: linux install packages
+  hosts: all
+  gather_facts: false
+  roles:
+    - install_packages
+  tags: packages
+
+- name: Docker Installation
+  hosts: all 
+  gather_facts: false
+  roles:
+    - docker
+  tags: install-docker
+
+- name: Docker Configuration
+  hosts: all 
+  gather_facts: false
+  roles:
+    - docker
+  tags: config-docker
+
+- name: Install and configure zsh
+  hosts: all 
+  gather_facts: true
+  roles:
+    - zsh-setup
+  tags: zsh
+
+- name: Install and configure terminator
+  hosts: all 
+  gather_facts: true
+  roles:
+    - terminator-setup
+  tags: terminator

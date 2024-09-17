@@ -1,0 +1,34 @@
+---
+- name: Download Zabbix release package
+  ansible.builtin.get_url:
+    url: "{{ zabbix_agent_url }}"
+    dest: /tmp/{{ zabbix_agent_deb }}
+
+- name: Install Zabbix release package
+  ansible.builtin.apt:
+    deb: /tmp/{{ zabbix_agent_deb }}
+    state: present
+
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Install Zabbix agent
+  ansible.builtin.apt:
+    name: zabbix-agent
+    state: present
+
+- name: Configure Zabbix agent
+  ansible.builtin.template:
+    src: zabbix_agentd.conf.j2
+    dest: /etc/zabbix/zabbix_agentd.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - Restart Zabbix agent
+
+- name: Enable Zabbix agent service
+  ansible.builtin.systemd:
+    name: zabbix-agent
+    enabled: yes

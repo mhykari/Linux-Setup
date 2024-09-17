@@ -1,0 +1,9 @@
+---
+
+- name : Dcoker Installation
+  import_tasks: install-docker.yml
+  tags: install-docker
+
+- name : Docker Configuration
+  import_tasks: config-docker.yml
+  tags: config-docker
