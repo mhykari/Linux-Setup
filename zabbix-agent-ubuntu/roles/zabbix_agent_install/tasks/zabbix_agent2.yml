@@ -41,3 +41,10 @@
   ansible.builtin.systemd:
     name: zabbix-agent2
     enabled: yes
+
+### Uncomment if you want to monitor docker containers with zabbix agent 2
+- name: Add zabbix user to the docker group
+  command: usermod -aG docker zabbix
+  become: true
+  notify:
+    - Restart Zabbix Agent 2
