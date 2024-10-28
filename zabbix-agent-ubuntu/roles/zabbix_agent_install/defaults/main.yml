@@ -13,5 +13,5 @@ zabbix_agent2_deb: "zabbix-release_latest+ubuntu22.04_all.deb"
 
 # zabbix.conf file
 zabbix_server_name: "Zabbix server"
-zabbix_server: "::ffff:127.0.0.1,213.233.177.229"
-zabbix_server_active: "::ffff:127.0.0.1,213.233.177.229"
+zabbix_server: "::ffff:127.0.0.1,zabbix-server-ip"
+zabbix_server_active: "::ffff:127.0.0.1,zabbix-server-ip"
