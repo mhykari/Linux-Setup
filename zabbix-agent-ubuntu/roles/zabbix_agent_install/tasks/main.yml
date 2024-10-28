@@ -1,0 +1,8 @@
+---
+- name: Install Zabbix Agent
+  import_tasks: zabbix_agent.yml
+  tags: zabbix_agent
+
+- name: Install Zabbix Agent 2
+  import_tasks: zabbix_agent2.yml
+  tags: zabbix_agent2

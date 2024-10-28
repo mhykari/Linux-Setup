@@ -1,5 +1,0 @@
----
-zabbix_server: "::ffff:127.0.0.1,zabbix-server-ip"
-zabbix_server_active: "::ffff:127.0.0.1,zabbix-server-ip"
-zabbix_agent_url: "https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_7.0-2+ubuntu22.04_all.deb"
-zabbix_agent_deb: "zabbix-release_7.0-2+ubuntu22.04_all.deb"

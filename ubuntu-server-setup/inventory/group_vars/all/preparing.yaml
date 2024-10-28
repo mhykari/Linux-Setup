@@ -25,7 +25,6 @@ packages:
 - tcpdump
 - axel
 - iptables-persistent
-- ntp
 - auditd
 - libpwquality-common
 - cracklib-runtime

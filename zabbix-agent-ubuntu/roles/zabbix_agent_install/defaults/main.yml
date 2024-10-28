@@ -1,0 +1,17 @@
+---
+# zabbix agent varsion
+## Ubuntu 22
+zabbix_agent_url: "https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest+ubuntu22.04_all.deb"
+zabbix_agent_deb: "zabbix-release_latest+ubuntu22.04_all.deb"
+zabbix_agent2_url: "https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest+ubuntu22.04_all.deb"
+zabbix_agent2_deb: "zabbix-release_latest+ubuntu22.04_all.deb"
+## Ubuntu 24
+#zabbix_agent_url: "https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest+ubuntu24.04_all.deb"
+#zabbix_agent_deb: "zabbix-release_latest+ubuntu24.04_all.deb"
+#zabbix_agent2_url: "https://repo.zabbix.com/zabbix/7.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest+ubuntu24.04_all.deb"
+#zabbix_agent2_deb: "zabbix-release_latest+ubuntu24.04_all.deb"
+
+# zabbix.conf file
+zabbix_server_name: "Zabbix server"
+zabbix_server: "::ffff:127.0.0.1,213.233.177.229"
+zabbix_server_active: "::ffff:127.0.0.1,213.233.177.229"

@@ -8,3 +8,8 @@
   ansible.builtin.systemd:
     name: zabbix-agent
     state: restarted
+
+- name: Restart Zabbix Agent 2
+  ansible.builtin.systemd:
+    name: zabbix-agent2
+    state: restarted
