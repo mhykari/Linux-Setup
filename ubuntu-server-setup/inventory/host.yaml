@@ -1,7 +1,0 @@
-all:
-  children:
-    ubuntu-servers:
-      hosts:
-        dpa-0:
-          ansible_host: ubuntu-server
-          ansible_port: 22

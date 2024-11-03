@@ -1,0 +1,7 @@
+all:
+  children:
+    ubuntu-servers:
+      hosts:
+        mhykari-2-lab:
+          ansible_host: mhykari-2-lab
+#          ansible_port: 22
