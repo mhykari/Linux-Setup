@@ -39,3 +39,5 @@ snap_packages:
   - name: "vlc"
   - name: "spotify"
   - name: "telegram-desktop"
+  - name: "shotwell"
+  - name: "draw.io"
